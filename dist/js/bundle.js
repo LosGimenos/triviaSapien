@@ -26537,7 +26537,21 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Show = function Show() {
-  return _react2.default.createElement("div", { className: "show" });
+  return _react2.default.createElement(
+    "div",
+    { className: "show" },
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Smarter Pub Trivia"
+    ),
+    _react2.default.createElement(
+      "video",
+      { className: "show--video", controls: true },
+      _react2.default.createElement("source", { src: "../assets/vid/show-vid.mp4",
+        type: "video/mp4" })
+    )
+  );
 };
 
 exports.default = Show;
