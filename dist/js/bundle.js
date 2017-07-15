@@ -23395,10 +23395,11 @@ if(false) {
 
 exports = module.exports = __webpack_require__(199)(undefined);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Vollkorn);", ""]);
 
 // module
-exports.push([module.i, ".hero {\n  background: url(" + __webpack_require__(200) + "); }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0; }\n\n.main-nav {\n  position: fixed;\n  top: 0;\n  height: 20vh;\n  width: 1260px;\n  background-color: #A42A15;\n  color: #fff;\n  font-family: \"Vollkorn\", serif;\n  z-index: 5; }\n  .main-nav ul {\n    list-style: none; }\n\n.nav--title {\n  text-align: center;\n  font-family: \"Abril Fatface\", cursive;\n  font-size: 175%; }\n  .nav--title h1 {\n    margin: 0; }\n\n.nav--entry {\n  position: absolute;\n  top: 0;\n  right: 0;\n  display: flex;\n  justify-content: center;\n  width: 15%; }\n  .nav--entry p:hover {\n    background-color: rgba(0, 0, 0, 0.5); }\n\n.hero {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(200) + ");\n  background-size: cover;\n  background-position: center;\n  height: 100vh; }\n\n.hero--text {\n  position: absolute;\n  bottom: 0;\n  right: 2%;\n  font-family: \"Vollkorn\", serif;\n  font-size: 2em;\n  color: #fff; }\n\n.show {\n  height: 80vh;\n  background-color: #EEEEEE;\n  padding-top: 2%;\n  text-align: center;\n  font-family: \"Vollkorn\", serif;\n  color: #3F3F3F; }\n\n.show--video {\n  height: 70%; }\n\n.how-it-works {\n  text-align: center;\n  font-family: \"Vollkorn\", serif; }\n  .how-it-works ul {\n    list-style: none;\n    padding: 0; }\n  .how-it-works li img {\n    width: 30%;\n    height: 60%; }\n  .how-it-works li {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    margin-bottom: 2%;\n    border: 1px solid #EEEEEE;\n    border-radius: 25px;\n    width: 90%; }\n  .how-it-works li:nth-child(odd) {\n    background-color: #D3EBB2; }\n  .how-it-works li:nth-child(even) {\n    background-color: #F7E999; }\n  .how-it-works li div {\n    width: 40%;\n    font-size: 2em; }\n", ""]);
 
 // exports
 
@@ -26396,6 +26397,22 @@ var _show = __webpack_require__(235);
 
 var _show2 = _interopRequireDefault(_show);
 
+var _plans = __webpack_require__(236);
+
+var _plans2 = _interopRequireDefault(_plans);
+
+var _testimonials = __webpack_require__(244);
+
+var _testimonials2 = _interopRequireDefault(_testimonials);
+
+var _howItWorks = __webpack_require__(245);
+
+var _howItWorks2 = _interopRequireDefault(_howItWorks);
+
+var _about = __webpack_require__(246);
+
+var _about2 = _interopRequireDefault(_about);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26410,7 +26427,47 @@ var Main = function (_Component) {
   function Main() {
     _classCallCheck(this, Main);
 
-    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this));
+
+    _this.state = {
+      plans: [{
+        price: 79,
+        title: 'El Jefe',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }, {
+        price: 89,
+        title: 'El Guapo',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }, {
+        price: 99,
+        title: 'The Party Ender',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }],
+      testimonials: [{
+        img: './assets/img/tacos.jpg',
+        title: 'Rob',
+        copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }, {
+        img: './assets/img/tacos.jpg',
+        title: 'Sandra',
+        copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }, {
+        img: './assets/img/tacos.jpg',
+        title: 'Hutch',
+        copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }],
+      howItems: [{
+        img: './assets/img/enzoTrip.jpg',
+        copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }, {
+        img: './assets/img/trekEnzo.jpg',
+        copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }, {
+        img: './assets/img/bb8.jpg',
+        copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, urna eu tincidunt egestas, lectus enim viverra diam, eu convallis ante mauris quis ipsum. Pellentesque semper rhoncus enim, quis tristique ex pellentesque ut.'
+      }]
+    };
+    return _this;
   }
 
   _createClass(Main, [{
@@ -26420,7 +26477,17 @@ var Main = function (_Component) {
         'div',
         { className: 'main-wrapper' },
         _react2.default.createElement(_hero2.default, null),
-        _react2.default.createElement(_show2.default, null)
+        _react2.default.createElement(_show2.default, null),
+        _react2.default.createElement(_howItWorks2.default, {
+          howItems: this.state.howItems
+        }),
+        _react2.default.createElement(_plans2.default, {
+          plans: this.state.plans
+        }),
+        _react2.default.createElement(_testimonials2.default, {
+          testimonials: this.state.testimonials
+        }),
+        _react2.default.createElement(_about2.default, null)
       );
     }
   }]);
@@ -26497,11 +26564,20 @@ var Nav = function Nav() {
     ),
     _react2.default.createElement(
       "div",
-      null,
+      { className: "nav--title" },
+      _react2.default.createElement(
+        "h1",
+        null,
+        "Trivia Sapien"
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "nav--entry" },
       _react2.default.createElement(
         "p",
         null,
-        "Sign In"
+        "Sign In\xA0"
       ),
       _react2.default.createElement(
         "p",
@@ -26511,7 +26587,7 @@ var Nav = function Nav() {
       _react2.default.createElement(
         "p",
         null,
-        "Register"
+        "\xA0Register"
       )
     )
   );
@@ -26545,16 +26621,338 @@ var Show = function Show() {
       null,
       "Smarter Pub Trivia"
     ),
+    _react2.default.createElement("hr", null),
     _react2.default.createElement(
       "video",
       { className: "show--video", controls: true },
-      _react2.default.createElement("source", { src: "../assets/vid/show-vid.mp4",
-        type: "video/mp4" })
+      _react2.default.createElement("source", {
+        src: "../assets/vid/show-vid.mp4",
+        type: "video/mp4"
+      })
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "show--cta" },
+      _react2.default.createElement(
+        "h3",
+        null,
+        "Try it Out!"
+      )
     )
   );
 };
 
 exports.default = Show;
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(11);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _buttonCta = __webpack_require__(243);
+
+var _buttonCta2 = _interopRequireDefault(_buttonCta);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import PlanItem from './planItem.jsx';
+
+var propTypes = {
+  plans: _propTypes2.default.array.isRequired
+};
+
+var Plans = function Plans(_ref) {
+  var plans = _ref.plans;
+
+  var renderPlanItems = function renderPlanItems() {
+    return plans.map(function (plan) {
+      return _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          'h3',
+          null,
+          plan.title
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            plan.price
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            plan.info
+          )
+        ),
+        _react2.default.createElement(_buttonCta2.default, null)
+      );
+    });
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'plans' },
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Three Flights of Fright!'
+    ),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'ul',
+      null,
+      renderPlanItems()
+    )
+  );
+};
+
+Plans.propTypes = propTypes;
+
+exports.default = Plans;
+
+/***/ }),
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ButtonCta = function ButtonCta() {
+  return _react2.default.createElement(
+    'button',
+    null,
+    'Check me out!'
+  );
+};
+
+exports.default = ButtonCta;
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(11);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  testimonials: _propTypes2.default.array.isRequired
+};
+
+var Testimonials = function Testimonials(_ref) {
+  var testimonials = _ref.testimonials;
+
+  var renderTestimonials = function renderTestimonials() {
+    return testimonials.map(function (testimonial) {
+      return _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h3',
+            null,
+            testimonial.title
+          )
+        ),
+        _react2.default.createElement('img', { src: testimonial.img, alt: testimonial.title }),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            testimonial.copy
+          )
+        )
+      );
+    });
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'testimonials' },
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Testimonials'
+    ),
+    _react2.default.createElement('hr', null),
+    renderTestimonials()
+  );
+};
+
+Testimonials.propTypes = propTypes;
+exports.default = Testimonials;
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(11);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  howItems: _propTypes2.default.array.isRequired
+};
+
+var HowItWorks = function HowItWorks(_ref) {
+  var howItems = _ref.howItems;
+
+  var renderItems = function renderItems() {
+    return howItems.map(function (howItem) {
+      return _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement('img', { src: howItem.img, alt: 'How it Works' }),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            howItem.copy
+          )
+        )
+      );
+    });
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'how-it-works' },
+    _react2.default.createElement(
+      'h2',
+      null,
+      'How it Works'
+    ),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'ul',
+      null,
+      renderItems()
+    )
+  );
+};
+
+HowItWorks.propTypes = propTypes;
+exports.default = HowItWorks;
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var About = function About() {
+  return _react2.default.createElement(
+    "div",
+    { className: "about" },
+    _react2.default.createElement(
+      "h2",
+      null,
+      "I like these guys...they are funny guys..."
+    ),
+    _react2.default.createElement("hr", null),
+    _react2.default.createElement(
+      "div",
+      null,
+      _react2.default.createElement(
+        "p",
+        null,
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta suscipit magna, at dignissim sem varius vel. Mauris libero est, porta ac lacinia ut, pretium sit amet diam. Morbi faucibus ac magna ac sodales. Praesent sem turpis, semper vitae tortor sit amet, faucibus ultricies risus. Etiam accumsan, ligula ut lobortis consequat, lectus lacus venenatis mi, nec aliquet ipsum leo at arcu. Proin vel ante enim. Integer dui nunc, condimentum ut urna quis, volutpat blandit diam. Aenean ut ex mauris. Aenean vitae urna a leo aliquet pharetra et non ante. Phasellus risus turpis, ultricies nec tincidunt at, dictum id sapien. Etiam sit amet leo sit amet lacus tincidunt volutpat ac facilisis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus magna sit amet aliquet tempor. Vestibulum molestie tellus ac vestibulum semper."
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      null,
+      _react2.default.createElement(
+        "p",
+        null,
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta suscipit magna, at dignissim sem varius vel. Mauris libero est, porta ac lacinia ut, pretium sit amet diam. Morbi faucibus ac magna ac sodales. Praesent sem turpis, semper vitae tortor sit amet, faucibus ultricies risus. Etiam accumsan, ligula ut lobortis consequat, lectus lacus venenatis mi, nec aliquet ipsum leo at arcu. Proin vel ante enim. Integer dui nunc, condimentum ut urna quis, volutpat blandit diam. Aenean ut ex mauris. Aenean vitae urna a leo aliquet pharetra et non ante. Phasellus risus turpis, ultricies nec tincidunt at, dictum id sapien. Etiam sit amet leo sit amet lacus tincidunt volutpat ac facilisis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus magna sit amet aliquet tempor. Vestibulum molestie tellus ac vestibulum semper."
+      )
+    )
+  );
+};
+
+exports.default = About;
 
 /***/ })
 /******/ ]);

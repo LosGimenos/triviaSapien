@@ -1,3 +1,16 @@
 .hero {
-  background: url($hero-img);
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url($hero-img);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero--text {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  font-family: $copy;
+  font-size: 2em;
+  color: $white;
 }

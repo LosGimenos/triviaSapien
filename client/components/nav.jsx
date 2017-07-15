@@ -1,18 +1,19 @@
 import React from 'react';
 
-const Nav = () => {
-  return (
-    <div className="main-nav">
-      <ul>
-        <li>About</li>
-      </ul>
-      <div>
-        <p>Sign In</p>
-        <p> || </p>
-        <p>Register</p>
-      </div>
+const Nav = () => (
+  <div className="main-nav">
+    <ul>
+      <li>About</li>
+    </ul>
+    <div className="nav--title">
+      <h1>Trivia Sapien</h1>
     </div>
-  );
-};
+    <div className="nav--entry">
+      <p>Sign In&nbsp;</p>
+      <p> || </p>
+      <p>&nbsp;Register</p>
+    </div>
+  </div>
+);
 
 export default Nav;

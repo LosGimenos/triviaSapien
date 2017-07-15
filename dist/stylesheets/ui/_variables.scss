@@ -1,7 +1,21 @@
 //colors
 $white: #fff;
 $black: #000;
+$flat-red: #A42A15;
+$flat-brown: #5B4B27;
+$flat-beige: #F7E999;
+$flat-seafoam: #D3EBB2;
+$flat-grey: #EEEEEE;
+$flat-black: #3F3F3F;
+
 
 //urls
 $hero-img: "../assets/img/hero.jpg";
 $show-vid: "../assets/vid/show-vid.mp4";
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+$title: 'Abril Fatface', cursive;
+
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+$copy: 'Vollkorn', serif;
