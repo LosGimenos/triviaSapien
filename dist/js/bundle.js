@@ -23399,7 +23399,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Abr
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Vollkorn);", ""]);
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0; }\n\n.main-nav {\n  position: fixed;\n  top: 0;\n  height: 20vh;\n  width: 1260px;\n  background-color: #A42A15;\n  color: #fff;\n  font-family: \"Vollkorn\", serif;\n  z-index: 5; }\n  .main-nav ul {\n    list-style: none; }\n\n.nav--title {\n  text-align: center;\n  font-family: \"Abril Fatface\", cursive;\n  font-size: 175%; }\n  .nav--title h1 {\n    margin: 0; }\n\n.nav--entry {\n  position: absolute;\n  top: 0;\n  right: 0;\n  display: flex;\n  justify-content: center;\n  width: 15%; }\n  .nav--entry p:hover {\n    background-color: rgba(0, 0, 0, 0.5); }\n\n.hero {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(200) + ");\n  background-size: cover;\n  background-position: center;\n  height: 100vh; }\n\n.hero--text {\n  position: absolute;\n  bottom: 0;\n  right: 2%;\n  font-family: \"Vollkorn\", serif;\n  font-size: 2em;\n  color: #fff; }\n\n.show {\n  height: 80vh;\n  background-color: #EEEEEE;\n  padding-top: 2%;\n  text-align: center;\n  font-family: \"Vollkorn\", serif;\n  color: #3F3F3F; }\n\n.show--video {\n  height: 70%; }\n\n.how-it-works {\n  text-align: center;\n  font-family: \"Vollkorn\", serif; }\n  .how-it-works ul {\n    list-style: none;\n    padding: 0; }\n  .how-it-works li img {\n    width: 30%;\n    height: 60%; }\n  .how-it-works li {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    margin-bottom: 2%;\n    border: 1px solid #EEEEEE;\n    border-radius: 25px;\n    width: 90%; }\n  .how-it-works li:nth-child(odd) {\n    background-color: #D3EBB2; }\n  .how-it-works li:nth-child(even) {\n    background-color: #F7E999; }\n  .how-it-works li div {\n    width: 40%;\n    font-size: 2em; }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n  body h2 {\n    font-size: 2em; }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  70% {\n    opacity: .5; }\n  90% {\n    opacity: 0.75; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  70% {\n    opacity: .5; }\n  90% {\n    opacity: 0.25; }\n  100% {\n    opacity: 0; } }\n\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n.fadeIn {\n  opacity: 1;\n  transform: translateX(0); }\n\n.main-nav,\n.scrolled-nav {\n  position: fixed;\n  top: 0;\n  height: 20vh;\n  width: 100%;\n  background-color: #A42A15;\n  color: #fff;\n  font-family: \"Vollkorn\", serif;\n  z-index: 5;\n  transform: translateY(0);\n  transition: all .5s ease-out; }\n  .main-nav ul,\n  .scrolled-nav ul {\n    list-style: none; }\n  .main-nav div.nav--title,\n  .scrolled-nav div.nav--title {\n    transition: all .5s ease-out; }\n\n.nav--title {\n  text-align: center;\n  font-family: \"Abril Fatface\", cursive;\n  font-size: 175%; }\n  .nav--title h1 {\n    margin: 0; }\n\n.nav--entry {\n  position: absolute;\n  top: 0;\n  right: 0;\n  display: flex;\n  justify-content: center;\n  width: 15%; }\n  .nav--entry p:hover {\n    text-decoration: underline; }\n\n.scrolled-nav {\n  height: 15vh; }\n  .scrolled-nav div.nav--title {\n    transform: translateY(-60%); }\n\n.hero {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(200) + ");\n  background-size: cover;\n  background-position: center;\n  height: 100vh; }\n\n.hero--text {\n  position: absolute;\n  bottom: 0;\n  right: 2%;\n  font-family: \"Vollkorn\", serif;\n  font-size: 2em;\n  color: #fff;\n  animation: fadeIn 1s; }\n\n.show {\n  height: 80vh;\n  background-color: #EEEEEE;\n  padding-top: 2%;\n  text-align: center;\n  font-family: \"Vollkorn\", serif;\n  color: #3F3F3F; }\n\n.show--video {\n  height: 70%; }\n\n.how-it-works {\n  text-align: center;\n  font-family: \"Vollkorn\", serif; }\n  .how-it-works ul {\n    list-style: none;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n  .how-it-works li img {\n    width: 30%;\n    height: 60%; }\n  .how-it-works li {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    margin-bottom: 2%;\n    border: 1px solid #EEEEEE;\n    border-radius: 25px;\n    width: 90%;\n    opacity: 0;\n    transform: translateX(-200px);\n    transition: all 1s ease-out; }\n  .how-it-works li.fadeIn {\n    opacity: 1;\n    transform: translateX(0); }\n  .how-it-works li:nth-child(odd) {\n    background-color: #D3EBB2; }\n  .how-it-works li:nth-child(even) {\n    background-color: #F7E999;\n    transform: translateX(200px);\n    transition: all 1s ease-out; }\n    .how-it-works li:nth-child(even) img {\n      position: relative;\n      left: 50%; }\n    .how-it-works li:nth-child(even) div {\n      position: relative;\n      right: 50%; }\n  .how-it-works li:nth-child(even).fadeIn {\n    opacity: 1;\n    transform: translateX(0); }\n  .how-it-works li div {\n    width: 40%;\n    font-size: 2em; }\n\n.plans {\n  text-align: center;\n  font-family: \"Vollkorn\", serif;\n  background-color: #EEEEEE;\n  padding-top: 2%; }\n  .plans h2 {\n    color: #3F3F3F; }\n  .plans ul {\n    list-style: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around; }\n  .plans li {\n    display: flex;\n    width: 100%;\n    justify-content: space-around;\n    align-items: center;\n    border-bottom: 1px solid #3F3F3F; }\n  .plans li:last-child {\n    border-bottom: none; }\n  .plans li h3 {\n    font-size: 4em; }\n\n.plans--info {\n  width: 40%; }\n\n.plans--price {\n  font-size: 8em; }\n\n.plans--cta {\n  display: flex;\n  flex-direction: column;\n  width: 23%; }\n  .plans--cta img {\n    width: 100%;\n    height: 20em; }\n\n.testimonials {\n  font-family: \"Vollkorn\", serif;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  .testimonials ul {\n    list-style: none;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 0;\n    padding: 0;\n    width: 95%; }\n  .testimonials li {\n    display: flex;\n    justify-content: space-around;\n    margin-bottom: 1%;\n    border: 1px solid #3F3F3F;\n    opacity: 0;\n    transform: scale(0.5, 0.5);\n    transition: all .75s ease-out; }\n    .testimonials li h3 {\n      font-size: 2em; }\n    .testimonials li p {\n      font-size: 1.25em; }\n    .testimonials li img {\n      width: 40%;\n      height: 40%; }\n    .testimonials li div {\n      width: 40%; }\n  .testimonials li.zoom {\n    opacity: 1;\n    transform: scale(1, 1); }\n\n.about {\n  text-align: center;\n  background-color: #EEEEEE;\n  padding-top: 2%;\n  font-family: \"Vollkorn\", serif; }\n  .about img {\n    margin: 3% 0; }\n  .about div.about--copy {\n    display: flex;\n    justify-content: center; }\n    .about div.about--copy div {\n      width: 35%; }\n    .about div.about--copy div:nth-child(1) {\n      margin-right: 6%; }\n", ""]);
 
 // exports
 
@@ -26684,29 +26684,35 @@ var Plans = function Plans(_ref) {
         'li',
         null,
         _react2.default.createElement(
-          'h3',
-          null,
-          plan.title
-        ),
-        _react2.default.createElement(
           'div',
-          null,
+          { className: 'plans--price' },
           _react2.default.createElement(
             'p',
             null,
+            '$',
             plan.price
           )
         ),
         _react2.default.createElement(
           'div',
-          null,
+          { className: 'plans--info' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            plan.title
+          ),
           _react2.default.createElement(
             'p',
             null,
             plan.info
           )
         ),
-        _react2.default.createElement(_buttonCta2.default, null)
+        _react2.default.createElement(
+          'div',
+          { className: 'plans--cta' },
+          _react2.default.createElement('img', { src: '../assets/img/maxypoo.png', alt: 'plans' }),
+          _react2.default.createElement(_buttonCta2.default, null)
+        )
       );
     });
   };
@@ -26798,6 +26804,7 @@ var Testimonials = function Testimonials(_ref) {
       return _react2.default.createElement(
         'li',
         null,
+        _react2.default.createElement('img', { src: testimonial.img, alt: testimonial.title }),
         _react2.default.createElement(
           'div',
           null,
@@ -26805,12 +26812,7 @@ var Testimonials = function Testimonials(_ref) {
             'h3',
             null,
             testimonial.title
-          )
-        ),
-        _react2.default.createElement('img', { src: testimonial.img, alt: testimonial.title }),
-        _react2.default.createElement(
-          'div',
-          null,
+          ),
           _react2.default.createElement(
             'p',
             null,
@@ -26830,7 +26832,11 @@ var Testimonials = function Testimonials(_ref) {
       'Testimonials'
     ),
     _react2.default.createElement('hr', null),
-    renderTestimonials()
+    _react2.default.createElement(
+      'ul',
+      null,
+      renderTestimonials()
+    )
   );
 };
 
@@ -26931,22 +26937,27 @@ var About = function About() {
       "I like these guys...they are funny guys..."
     ),
     _react2.default.createElement("hr", null),
+    _react2.default.createElement("img", { src: "../assets/img/guyz.jpg", alt: "these guys..." }),
     _react2.default.createElement(
       "div",
-      null,
+      { className: "about--copy" },
       _react2.default.createElement(
-        "p",
+        "div",
         null,
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta suscipit magna, at dignissim sem varius vel. Mauris libero est, porta ac lacinia ut, pretium sit amet diam. Morbi faucibus ac magna ac sodales. Praesent sem turpis, semper vitae tortor sit amet, faucibus ultricies risus. Etiam accumsan, ligula ut lobortis consequat, lectus lacus venenatis mi, nec aliquet ipsum leo at arcu. Proin vel ante enim. Integer dui nunc, condimentum ut urna quis, volutpat blandit diam. Aenean ut ex mauris. Aenean vitae urna a leo aliquet pharetra et non ante. Phasellus risus turpis, ultricies nec tincidunt at, dictum id sapien. Etiam sit amet leo sit amet lacus tincidunt volutpat ac facilisis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus magna sit amet aliquet tempor. Vestibulum molestie tellus ac vestibulum semper."
-      )
-    ),
-    _react2.default.createElement(
-      "div",
-      null,
+        _react2.default.createElement(
+          "p",
+          null,
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta suscipit magna, at dignissim sem varius vel. Mauris libero est, porta ac lacinia ut, pretium sit amet diam. Morbi faucibus ac magna ac sodales. Praesent sem turpis, semper vitae tortor sit amet, faucibus ultricies risus. Etiam accumsan, ligula ut lobortis consequat, lectus lacus venenatis mi, nec aliquet ipsum leo at arcu. Proin vel ante enim. Integer dui nunc, condimentum ut urna quis, volutpat blandit diam. Aenean ut ex mauris. Aenean vitae urna a leo aliquet pharetra et non ante. Phasellus risus turpis, ultricies nec tincidunt at, dictum id sapien. Etiam sit amet leo sit amet lacus tincidunt volutpat ac facilisis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus magna sit amet aliquet tempor. Vestibulum molestie tellus ac vestibulum semper."
+        )
+      ),
       _react2.default.createElement(
-        "p",
+        "div",
         null,
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta suscipit magna, at dignissim sem varius vel. Mauris libero est, porta ac lacinia ut, pretium sit amet diam. Morbi faucibus ac magna ac sodales. Praesent sem turpis, semper vitae tortor sit amet, faucibus ultricies risus. Etiam accumsan, ligula ut lobortis consequat, lectus lacus venenatis mi, nec aliquet ipsum leo at arcu. Proin vel ante enim. Integer dui nunc, condimentum ut urna quis, volutpat blandit diam. Aenean ut ex mauris. Aenean vitae urna a leo aliquet pharetra et non ante. Phasellus risus turpis, ultricies nec tincidunt at, dictum id sapien. Etiam sit amet leo sit amet lacus tincidunt volutpat ac facilisis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus magna sit amet aliquet tempor. Vestibulum molestie tellus ac vestibulum semper."
+        _react2.default.createElement(
+          "p",
+          null,
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta suscipit magna, at dignissim sem varius vel. Mauris libero est, porta ac lacinia ut, pretium sit amet diam. Morbi faucibus ac magna ac sodales. Praesent sem turpis, semper vitae tortor sit amet, faucibus ultricies risus. Etiam accumsan, ligula ut lobortis consequat, lectus lacus venenatis mi, nec aliquet ipsum leo at arcu. Proin vel ante enim. Integer dui nunc, condimentum ut urna quis, volutpat blandit diam. Aenean ut ex mauris. Aenean vitae urna a leo aliquet pharetra et non ante. Phasellus risus turpis, ultricies nec tincidunt at, dictum id sapien. Etiam sit amet leo sit amet lacus tincidunt volutpat ac facilisis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus magna sit amet aliquet tempor. Vestibulum molestie tellus ac vestibulum semper."
+        )
       )
     )
   );

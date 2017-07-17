@@ -1,0 +1,23 @@
+.about {
+  text-align: center;
+  background-color: $flat-grey;
+  padding-top: 2%;
+  font-family: $copy;
+
+  img {
+    margin: 3% 0;
+  }
+
+  div.about--copy {
+    display: flex;
+    justify-content: center;
+
+    div {
+      width: 35%;
+    }
+
+    div:nth-child(1) {
+      margin-right: 6%;
+    }
+  }
+}

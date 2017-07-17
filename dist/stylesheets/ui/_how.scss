@@ -5,6 +5,9 @@
   ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   li img {
@@ -20,7 +23,15 @@
     border: 1px solid $flat-grey;
     border-radius: 25px;
     width: 90%;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s ease-out;
   }
+
+  li.fadeIn {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
   li:nth-child(odd) {
     background-color: $flat-seafoam;
@@ -28,7 +39,24 @@
 
   li:nth-child(even) {
     background-color: $flat-beige;
+    transform: translateX(200px);
+    transition: all 1s ease-out;
+
+    img {
+      position: relative;
+      left: 50%;
+    }
+
+    div {
+      position: relative;
+      right: 50%;
+    }
   }
+
+   li:nth-child(even).fadeIn {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
   li div {
     width: 40%;

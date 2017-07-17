@@ -12,14 +12,17 @@ const Plans = ({ plans }) => {
   const renderPlanItems = (() => (
     plans.map(plan => (
       <li>
-        <h3>{plan.title}</h3>
-        <div>
-          <p>{plan.price}</p>
+        <div className="plans--price">
+          <p>${plan.price}</p>
         </div>
-        <div>
+        <div className="plans--info">
+          <h3>{plan.title}</h3>
           <p>{plan.info}</p>
         </div>
-        <ButtonCta />
+        <div className="plans--cta">
+          <img src="../assets/img/maxypoo.png" alt="plans" />
+          <ButtonCta />
+        </div>
       </li>
     ))
   ));

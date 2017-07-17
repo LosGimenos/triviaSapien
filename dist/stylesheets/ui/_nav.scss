@@ -1,15 +1,22 @@
-.main-nav {
+.main-nav,
+.scrolled-nav {
   position: fixed;
   top: 0;
   height: 20vh;
-  width: 1260px;
+  width: 100%;
   background-color: $flat-red;
   color: $white;
   font-family: $copy;
   z-index: 5;
+  transform: translateY(0);
+  transition: all .5s ease-out;
 
   ul {
     list-style: none;
+  }
+
+  div.nav--title {
+    transition: all .5s ease-out;
   }
 }
 
@@ -32,6 +39,14 @@
   width: 15%;
 
   p:hover {
-    background-color: rgba(0,0,0,.5);
+    text-decoration: underline;
+  }
+}
+
+.scrolled-nav {
+  height: 15vh;
+
+  div.nav--title {
+    transform: translateY(-60%);
   }
 }

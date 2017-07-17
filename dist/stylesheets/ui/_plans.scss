@@ -1,0 +1,53 @@
+.plans {
+  text-align: center;
+  font-family: $copy;
+  background-color: $flat-grey;
+  padding-top: 2%;
+
+  h2 {
+    color: $flat-black;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  li {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid $flat-black;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  li h3 {
+    font-size: 4em;
+  }
+
+}
+
+.plans--info {
+  width: 40%;
+}
+
+.plans--price {
+  font-size: 8em;
+}
+
+.plans--cta {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+
+  img {
+    width: 100%;
+    height: 20em;
+  }
+}

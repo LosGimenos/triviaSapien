@@ -9,11 +9,9 @@ const Testimonials = ({ testimonials }) => {
   const renderTestimonials = () => (
     testimonials.map(testimonial => (
       <li>
-        <div>
-          <h3>{testimonial.title}</h3>
-        </div>
         <img src={testimonial.img} alt={testimonial.title} />
         <div>
+          <h3>{testimonial.title}</h3>
           <p>{testimonial.copy}</p>
         </div>
       </li>
@@ -24,7 +22,9 @@ const Testimonials = ({ testimonials }) => {
     <div className="testimonials">
       <h2>Testimonials</h2>
       <hr />
-      {renderTestimonials()}
+      <ul>
+        {renderTestimonials()}
+      </ul>
     </div>
   );
 };
