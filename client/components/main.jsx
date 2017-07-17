@@ -6,6 +6,7 @@ import Plans from './plans.jsx';
 import Testimonials from './testimonials.jsx';
 import HowItWorks from './howItWorks.jsx';
 import About from './about.jsx';
+import Footer from './footer.jsx';
 
 export default class Main extends Component {
   constructor() {
@@ -77,6 +78,7 @@ export default class Main extends Component {
           testimonials={this.state.testimonials}
         />
         <About />
+        <Footer />
       </div>
     );
   }

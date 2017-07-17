@@ -1,7 +1,6 @@
 const howItems = document.querySelectorAll('.how-it-works li');
 const testimonialItems = document.querySelectorAll('.testimonials li');
-
-console.log(testimonialItems)
+const plansItems = document.querySelectorAll('.plans li');
 
 window.onload = () => {
   const controller = new ScrollMagic.Controller();
@@ -25,6 +24,14 @@ window.onload = () => {
       triggerElement: item,
     })
       .setClassToggle(item, 'zoom')
+      .addTo(controller);
+  });
+
+  plansItems.forEach((item) => {
+    const plansItemsScene = new ScrollMagic.Scene({
+      triggerElement: item,
+    })
+      .setClassToggle(item, 'shake')
       .addTo(controller);
   });
 

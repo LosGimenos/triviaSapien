@@ -23,6 +23,11 @@
     border-bottom: 1px solid $flat-black;
   }
 
+  li.shake {
+    animation: shake 1s both;
+    transform: translate3d(0, 0, 0);
+  }
+
   li:last-child {
     border-bottom: none;
   }
